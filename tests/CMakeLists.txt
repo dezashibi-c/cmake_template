@@ -1,3 +1,10 @@
+# To bypass clove-unit warnings
+if (MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
 # Add the test executable
 # clove-test tests must be linked to tests.c so don't forget to add them always
 # also don't forget to add other dependencies like math_utils.c in this example
