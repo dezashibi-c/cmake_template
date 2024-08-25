@@ -1,19 +1,17 @@
 cmake_minimum_required(VERSION 3.20)
 project(SimpleCProject LANGUAGES C)
 
-# Set C standard
 set(CMAKE_C_STANDARD 11)
 
-# Include directories
 include_directories(include)
 
-# Add the src directory
+# Add the src directory (this directory must include its own CMakeLists.txt file)
 add_subdirectory(src)
 
-# Enable testing
+# Enable CTest feature which is an internal feature of cmake
 enable_testing()
 
-# Add the tests directory
+# Add the tests directory same as src folder
 add_subdirectory(tests)
 
 # Ensure that the main project depends on all tests being built
