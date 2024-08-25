@@ -1,4 +1,6 @@
 # Add the test executable
+# clove-test tests must be linked to tests.c so don't forget to add them always
+# also don't forget to add other dependencies like math_utils.c in this example
 add_executable(test_math_utils tests.c test_math_utils.c ../src/math_utils.c)
 
 # Specify the include directories for the Clove Unit framework
