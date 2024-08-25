@@ -5,18 +5,23 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-# Add the test executable
-# clove-test tests must be linked to tests.c so don't forget to add them always
-# also don't forget to add other dependencies like math_utils.c in this example
-add_executable(test_math_utils tests.c test_math_utils.c ../src/math_utils.c)
+# Custom target to group all tests together
+add_custom_target(all_tests)
 
-# Specify the include directories for the Clove Unit framework
-target_include_directories(test_math_utils PRIVATE ../extern/clove-unit)
+# Function to add tests and their dependencies
+# also update all_tests target
+function(add_clove_test TEST_NAME DEPS)
+    add_executable(${TEST_NAME} tests.c ${TEST_NAME}.c ${DEPS})
 
-# Register the test with CTest
-add_test(NAME MathUtilsTests COMMAND $<TARGET_FILE:test_math_utils> -x)
+    target_include_directories(${TEST_NAME} PRIVATE ../extern/clove-unit)
 
-# Group all test executables under a single target
-add_custom_target(all_tests
-    DEPENDS test_math_utils
-)
+    add_test(NAME ${TEST_NAME} COMMAND $<TARGET_FILE:${TEST_NAME}> -x)
+
+    add_dependencies(all_tests ${TEST_NAME})
+endfunction()
+
+###############################################################################
+# TESTS
+###############################################################################
+
+add_clove_test(test_math_utils "../src/math_utils.c")
