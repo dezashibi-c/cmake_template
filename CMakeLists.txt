@@ -20,7 +20,6 @@ add_dependencies(main_exe_file all_tests)
 # Create a custom target to run tests
 add_custom_target(pre_build_tests
     COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG> --output-on-failure --verbose
-    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
     DEPENDS all_tests
 
     COMMENT "Running Tests..."
