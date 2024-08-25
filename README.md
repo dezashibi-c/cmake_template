@@ -15,6 +15,10 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 
 By reading their source codes as they are fully commented you can understand pretty much everything you need.
 
+## Resources
+
+I've get the good test run control [from this place](https://cliutils.gitlab.io/modern-cmake/chapters/testing.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
+
 ## License
 
 BSD 3-Clause License
