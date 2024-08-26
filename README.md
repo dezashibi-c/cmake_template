@@ -35,7 +35,7 @@ But the main workflow of using this template is like this:
 
 - KDevelop Users:
   1. You can rename the `b-cmake_template.kdev4` to your liking.
-  2. Also you can change project name [here](/b-cmake_template.kdev4#L4)
+  2. Also you can change project name [here](/b-cmake_template.kdev4#L4).
 
 ## Resources for learning `CMake`
 
