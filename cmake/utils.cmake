@@ -1,3 +1,9 @@
+if (MSVC)
+    add_compile_options(/W4)
+else()
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
+
 function(add_clove_test TEST_NAME GROUP DEPS)
     add_executable(${TEST_NAME} tests.c ${TEST_NAME}.c ${DEPS})
 

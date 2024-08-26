@@ -1,10 +1,3 @@
-# To bypass clove-unit warnings
-if (MSVC)
-    add_compile_options(/W4)
-else()
-    add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
 # all_tests target must be available to group all the defined tests together
 # add_clove_test assumes all_tests target is already defined so please
 # do not change or remove this line
