@@ -1,6 +1,6 @@
 #define CLOVE_SUITE_NAME MathUtilTests
 
-#include "clove-unit.h"
+#include "clove-unit/clove-unit.h"
 #include "math_utils.h"
 
 CLOVE_TEST(Addition)
