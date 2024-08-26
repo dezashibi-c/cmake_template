@@ -27,7 +27,7 @@ But the main workflow of using this template is like this:
 - Testing (`tests/CMakeLists.txt`):
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
   2. Follow `clove-unit` library guide and write your test.
-  3. use `add_clove_test` in `CMakeLists.txt` of `tests` directory to register your test.
+  3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
   4. **👉 NOTE:** Make sure to read the guide in the cmake file.
 
 ## Resources for learning `CMake`
