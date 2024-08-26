@@ -15,7 +15,7 @@ endfunction()
 function(enable_pre_build_testing TARGET_NAME GROUP)
     add_dependencies(${TARGET_NAME} ${GROUP})
     add_custom_target(pre_build_tests_for_${TARGET_NAME}
-        COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG> --output-on-failure
+        COMMAND ${CMAKE_CTEST_COMMAND} -C $<CONFIG> --output-on-failure --verbose
         DEPENDS ${GROUP}
 
         COMMENT "Pre build tests for `${TARGET_NAME}`..."
