@@ -33,6 +33,10 @@ But the main workflow of using this template is like this:
   3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
   4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L6-L13) in the cmake file.
 
+- KDevelop Users:
+  1. You can rename the `b-cmake_template.kdev4` to your liking.
+  2. Also you can change project name [here](/b-cmake_template.kdev4#L4)
+
 ## Resources for learning `CMake`
 
 Check out [this place](https://cliutils.gitlab.io/modern-cmake/README.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
