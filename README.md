@@ -7,9 +7,11 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 - `extern` folder is where you put your external dependencies, as an example I have used `clove-unit` library for unit testing.
 - `include` is where you put your exported header files.
 - `src` is where your `.c` files must be placed.
-- `tests` are written using `clove-unit` framework which is a lightweight and single header library. you can refer to [here](https://github.com/fdefelici/clove-unit) for more information.
+- `tests` are written using `clove-unit` framework which is a lightweight and single header library.
 
-**👉 NOTE:** there is also `.clang-format` available for you to use.
+**👉 NOTE:** You can refer to [here](https://github.com/fdefelici/clove-unit) for more information about `clove-unit`.
+
+**👉 NOTE:** There is also `.clang-format` available for you to use.
 
 ## `CMakeLists.txt` files
 
@@ -18,21 +20,25 @@ By reading their source codes as they are fully commented you can understand pre
 But the main workflow of using this template is like this:
 
 - in main `CMakeLists.txt`:
-  1. Rename project name  in line 7
-  2. Set `MAIN_EXEC_FILE` in line 16
-  3. Every time you add a new `.c` file you add it after line 19 in case your `MAIN_EXEC_FILE` needs it
-  4. If you want to add another Target aka. executable or library feel free to repeat what's on line 16 and 17 and be sure to rename the variables to meet your needs.
-  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at line 26
+  1. Rename project name  in [line 7](/CMakeLists.txt#L7).
+  2. Set `MAIN_EXEC_FILE` in [line 16](/CMakeLists.txt#L16).
+  3. Every time you add a new `.c` file you add it after line 19 in case your `MAIN_EXEC_FILE` needs it.
+  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [16 and 17](/CMakeLists.txt#L16-L20) also make sure to rename the variables to meet your needs.
+  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 26](/CMakeLists.txt#L26).
 
 - Testing (`tests/CMakeLists.txt`):
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
   2. Follow `clove-unit` library guide and write your test.
   3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
-  4. **👉 NOTE:** Make sure to read the guide in the cmake file.
+  4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L13-L20) in the cmake file.
 
 ## Resources for learning `CMake`
 
 Check out [this place](https://cliutils.gitlab.io/modern-cmake/README.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
+
+## Third-party Libraries
+
+- [Clove-Unit](https://github.com/fdefelici/clove-unit) ([MIT License - Copyright (c) 2021-2024 Federico De Felici](/extern/clove-unit/LICENSE))
 
 ## License
 
