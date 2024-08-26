@@ -15,9 +15,24 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 
 By reading their source codes as they are fully commented you can understand pretty much everything you need.
 
-## Resources
+But the main workflow of using this template is like this:
 
-I've get the good test run control [from this place](https://cliutils.gitlab.io/modern-cmake/chapters/testing.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
+- in main `CMakeLists.txt`:
+  1. Rename project name  in line 7
+  2. Set `MAIN_EXEC_FILE` in line 16
+  3. Every time you add a new `.c` file you add it after line 19 in case your `MAIN_EXEC_FILE` needs it
+  4. If you want to add another Target aka. executable or library feel free to repeat what's on line 16 and 17 and be sure to rename the variables to meet your needs.
+  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at line 26
+
+- Testing (`tests/CMakeLists.txt`):
+  1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
+  2. Follow `clove-unit` library guide and write your test.
+  3. use `add_clove_test` in `CMakeLists.txt` of `tests` directory to register your test.
+  4. **👉 NOTE:** Make sure to read the guide in the cmake file.
+
+## Resources for learning `CMake`
+
+Check out [this place](https://cliutils.gitlab.io/modern-cmake/README.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
 
 ## License
 
