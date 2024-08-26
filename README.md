@@ -4,6 +4,7 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 
 ## Structure
 
+- `cmake` any utility and re-usable files for your cmakes goes here.
 - `extern` folder is where you put your external dependencies, as an example I have used `clove-unit` library for unit testing.
 - `include` is where you put your exported header files.
 - `src` is where your `.c` files must be placed.
