@@ -6,7 +6,7 @@ include(cmake/utils.cmake)
 cmake_minimum_required(VERSION 3.20)
 project(SimpleCProject LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
-include_directories(include src)
+include_directories(include src extern)
 enable_testing()
 add_subdirectory(tests)
 

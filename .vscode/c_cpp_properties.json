@@ -4,7 +4,9 @@
             "name": "C Project",
             "includePath": [
                 "${default}",
-                "${workspaceFolder}/include"
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/extern"
             ],
             "defines": [
                 "_DEBUG",
