@@ -3,7 +3,6 @@
 ###############################################################################
 cmake_minimum_required(VERSION 3.20)
 set(CMAKE_C_STANDARD 11)
-include(cmake/configs.cmake)
 include(cmake/utils.cmake)
 
 ###############################################################################
@@ -12,6 +11,7 @@ include(cmake/utils.cmake)
 project(SimpleCProject LANGUAGES C)
 include_directories(include src extern)
 add_subdirectory(tests)
+include(cmake/configs.cmake)
 
 ###############################################################################
 # EXECUTABLE TARGETS

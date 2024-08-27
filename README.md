@@ -23,7 +23,7 @@ By reading their source codes as they are fully commented you can understand pre
 But the main workflow of using this template is like this:
 
 - in main `CMakeLists.txt`:
-  1. Rename project name  in [line 12](/CMakeLists.txt#L12).
+  1. Rename project name  in [line 11](/CMakeLists.txt#L11).
   2. Rename your desired executable file `main_exe_file` on lines [19](/CMakeLists.txt#L19) and [28](/CMakeLists.txt#L28).
   3. Every time you add a new `.c` file you add it in `EXECUTABLE TARGETS` section to one or more of your executable files.
   4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [19 to 22](/CMakeLists.txt#L19-L22) also make sure to rename the variables to meet your needs.
