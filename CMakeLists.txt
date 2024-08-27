@@ -10,8 +10,8 @@ include(cmake/utils.cmake)
 ###############################################################################
 project(SimpleCProject LANGUAGES C)
 include_directories(include src extern)
-add_subdirectory(tests)
 include(cmake/configs.cmake)
+add_subdirectory(tests)
 
 ###############################################################################
 # EXECUTABLE TARGETS
