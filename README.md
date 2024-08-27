@@ -38,11 +38,11 @@ But the main workflow of using this template is like this:
   2. If you're on Windows and you haven't installed your tools yet, make sure to check out [here](https://github.com/dezashibi-c/b-hello-world?tab=readme-ov-file#setting-up-the-compiler).
   3. Just open the folder like normal and let the magic happen.
 
-- CodeBlocks and Visual Studio Users:
+- CodeBlocks and Visual Studio 2022 Users:
   1. You need to create corresponding projects first.
   2. Open terminal in the folder (make sure you've deleted `build` folder if it already exists):
-     1. Enter `cmake --build -G""` if you need CodeBlocks project.
-     2. Enter `cmake --build -G""` if you need Visual Studio project.
+     1. Enter `cmake --build -G"CodeBlocks - Unix Makefiles"` if you need CodeBlocks project.
+     2. Enter `cmake --build -G"Visual Studio 17 2022"` if you need Visual Studio project.
   3. Now open up the `build` folder and you can find project or solution for your IDE.
 
 - KDevelop Users just open the folder and the IDE itself recognizes the `CMakeLists.txt` and will guide you through it.
