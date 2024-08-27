@@ -37,7 +37,7 @@ But the main workflow of using this template is like this:
 
 - Visual Studio Code Users:
   1. Make sure [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions are installed.
-  2. If you're on Windows and you haven't installed your tools yet, make sure to check out [here](https://github.com/dezashibi-c/b-hello-world?tab=readme-ov-file#setting-up-the-compiler).
+  2. If you're on Windows and you haven't installed your tools yet, make sure to check out [here](https://github.com/dezashibi-c/b-hello-world?tab=readme-ov-file#an-alternative).
   3. Just open the folder like normal and let the magic happen.
 
 - CodeBlocks and Visual Studio 2022 Users:
