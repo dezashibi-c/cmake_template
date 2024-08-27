@@ -1,3 +1,15 @@
+###############################################################################
+# GENERAL CONFIGURATIONS
+###############################################################################
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/out/tests/Debug")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/out/tests/Release")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_SOURCE_DIR}/out/tests/RelWithDebInfo")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL "${CMAKE_SOURCE_DIR}/out/tests/MinSizeRel")
+
+###############################################################################
+# CUSTOM TARGETS
+###############################################################################
+
 # all_tests target must be available to group all the defined tests together
 # add_clove_test assumes all_tests target is already defined so please
 # do not change or remove this line

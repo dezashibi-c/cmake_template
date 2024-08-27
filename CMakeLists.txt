@@ -1,20 +1,22 @@
+###############################################################################
+# GENERAL CONFIGURATIONS AND UTILITIES
+###############################################################################
+cmake_minimum_required(VERSION 3.20)
+set(CMAKE_C_STANDARD 11)
+include(cmake/configs.cmake)
 include(cmake/utils.cmake)
 
 ###############################################################################
 # PROJECT SETUP
 ###############################################################################
-cmake_minimum_required(VERSION 3.20)
 project(SimpleCProject LANGUAGES C)
-set(CMAKE_C_STANDARD 11)
 include_directories(include src extern)
-enable_testing()
 add_subdirectory(tests)
 
 ###############################################################################
 # EXECUTABLE TARGETS
 ###############################################################################
-set(MAIN_EXEC_FILE main_exe_file)
-add_executable(${MAIN_EXEC_FILE} 
+add_executable(main_exe_file 
     src/main.c
     src/math_utils.c
 )
@@ -23,4 +25,4 @@ add_executable(${MAIN_EXEC_FILE}
 # PRE BUILD TESTS
 ###############################################################################
 
-enable_pre_build_testing(${MAIN_EXEC_FILE} all_tests)
+enable_pre_build_testing(main_exe_file all_tests)

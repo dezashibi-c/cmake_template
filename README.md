@@ -14,6 +14,8 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 
 **👉 NOTE:** There is also `.clang-format` available for you to use.
 
+**👉 NOTE:** All the build artifacts will be placed in `out` folder.
+
 ## `CMakeLists.txt` files
 
 By reading their source codes as they are fully commented you can understand pretty much everything you need.
@@ -21,17 +23,17 @@ By reading their source codes as they are fully commented you can understand pre
 But the main workflow of using this template is like this:
 
 - in main `CMakeLists.txt`:
-  1. Rename project name  in [line 7](/CMakeLists.txt#L7).
-  2. Set `MAIN_EXEC_FILE` in [line 16](/CMakeLists.txt#L16).
-  3. Every time you add a new `.c` file you add it after line 19 in case your `MAIN_EXEC_FILE` needs it.
-  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [16 to 20](/CMakeLists.txt#L16-L20) also make sure to rename the variables to meet your needs.
-  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 26](/CMakeLists.txt#L26).
+  1. Rename project name  in [line 12](/CMakeLists.txt#L12).
+  2. Rename your desired executable file `main_exe_file` on lines [19](/CMakeLists.txt#L19) and [28](/CMakeLists.txt#L28).
+  3. Every time you add a new `.c` file you add it in `EXECUTABLE TARGETS` section to one or more of your executable files.
+  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [19 to 22](/CMakeLists.txt#L19-L22) also make sure to rename the variables to meet your needs.
+  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 28](/CMakeLists.txt#L28).
 
 - Testing (`tests/CMakeLists.txt`):
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
   2. Follow `clove-unit` library guide and write your test.
   3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
-  4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L6-L13) in the cmake file.
+  4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L18-L25) in the `tests` folder cmake file.
 
 - Visual Studio Code Users:
   1. Make sure [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions are installed.
