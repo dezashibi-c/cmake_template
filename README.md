@@ -33,9 +33,19 @@ But the main workflow of using this template is like this:
   3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
   4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L6-L13) in the cmake file.
 
-- KDevelop Users:
-  1. You can rename the `b-cmake_template.kdev4` to your liking.
-  2. Also you can change project name [here](/b-cmake_template.kdev4#L4).
+- Visual Studio Code Users:
+  1. Make sure [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions are installed.
+  2. If you're on Windows and you haven't installed your tools yet, make sure to check out [here](https://github.com/dezashibi-c/b-hello-world?tab=readme-ov-file#setting-up-the-compiler).
+  3. Just open the folder like normal and let the magic happen.
+
+- CodeBlocks and Visual Studio Users:
+  1. You need to create corresponding projects first.
+  2. Open terminal in the folder (make sure you've deleted `build` folder if it already exists):
+     1. Enter `cmake --build -G""` if you need CodeBlocks project.
+     2. Enter `cmake --build -G""` if you need Visual Studio project.
+  3. Now open up the `build` folder and you can find project or solution for your IDE.
+
+- KDevelop Users just open the folder and the IDE itself recognizes the `CMakeLists.txt` and will guide you through it.
 
 ## Resources for learning `CMake`
 
