@@ -1,9 +1,6 @@
 {
     "files.associations": {
         "clove-unit.h": "c",
-        "stdio.h": "c",
-        "utils.h": "c",
-        "desh.h": "c",
         "stdlib.h": "c"
     }
 }
