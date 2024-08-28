@@ -1,10 +1,7 @@
 ###############################################################################
 # GENERAL CONFIGURATIONS
 ###############################################################################
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/out/tests/Debug")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/out/tests/Release")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO "${CMAKE_SOURCE_DIR}/out/tests/RelWithDebInfo")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL "${CMAKE_SOURCE_DIR}/out/tests/MinSizeRel")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/out_tests/${CMAKE_BUILD_TYPE}")
 
 ###############################################################################
 # CUSTOM TARGETS

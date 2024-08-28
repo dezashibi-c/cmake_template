@@ -14,7 +14,7 @@ This is a beginner friendly `cmake` for `C` projects. while it's not by all mean
 
 **👉 NOTE:** There is also `.clang-format` available for you to use.
 
-**👉 NOTE:** All the build artifacts will be placed in `out` folder.
+**👉 NOTE:** All the build artifacts will be placed in `out` folder, all the build artifacts for tests will be placed in `out_tests` folder.
 
 ## `CMakeLists.txt` files
 
@@ -33,7 +33,7 @@ But the main workflow of using this template is like this:
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
   2. Follow `clove-unit` library guide and write your test.
   3. use `add_clove_test` with the exact name `test_<whatever>` without `.c` in `CMakeLists.txt` of `tests` directory to register your test.
-  4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L18-L25) in the `tests` folder cmake file.
+  4. **👉 NOTE:** Make sure to [read the guide](/tests/CMakeLists.txt#L15-L22) in the `tests` folder cmake file.
 
 - Visual Studio Code Users:
   1. Make sure [C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) and [CMake Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools) extensions are installed.
