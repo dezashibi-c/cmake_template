@@ -49,6 +49,10 @@ But the main workflow of using this template is like this:
 
 - KDevelop Users just open the folder and the IDE itself recognizes the `CMakeLists.txt` and will guide you through it.
 
+- **Adding Configurations to define macros**:
+
+    You can use `define_macro_option(<target name> <macro name in your code> <default value ON/OFF>)` after your executable or libraries. this will add `ENABLE_<macro name you've provided>` cmake option.
+
 ## Resources for learning `CMake`
 
 Check out [this place](https://cliutils.gitlab.io/modern-cmake/README.html). it's a good book and I highly recommend you to read it if you want to get more into cmake.
