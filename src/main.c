@@ -7,7 +7,9 @@ int main(void)
     printf("Sum: %d\n", add(a, b));
     printf("Difference: %d\n", subtract(a, b));
 
+#ifdef PRINT_GREETINGS
     puts("Hey There");
+#endif
 
     return 0;
 }

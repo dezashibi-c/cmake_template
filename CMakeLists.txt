@@ -21,6 +21,8 @@ add_executable(main_exe_file
     src/math_utils.c
 )
 
+define_macro_option(main_exe_file PRINT_GREETINGS ON)
+
 ###############################################################################
 # PRE BUILD TESTS
 ###############################################################################
