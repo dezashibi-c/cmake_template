@@ -27,7 +27,7 @@ But the main workflow of using this template is like this:
   2. Rename your desired executable file `main_exe_file` on lines [19](/CMakeLists.txt#L19) and [30](/CMakeLists.txt#L28).
   3. Every time you add a new `.c` file you add it in `EXECUTABLE TARGETS` section to one or more of your executable files.
   4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [19 to 22](/CMakeLists.txt#L19-L22) also make sure to rename the variables to meet your needs.
-  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 28](/CMakeLists.txt#L28).
+  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 30](/CMakeLists.txt#L28).
 
 - Testing (`tests/CMakeLists.txt`):
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
@@ -51,7 +51,8 @@ But the main workflow of using this template is like this:
 
 - **Adding Configurations to define macros**:
 
-    You can use `define_macro_option(<target name> <macro name in your code> <default value ON/OFF>)` after your executable or libraries. this will add `<target name>_ENABLE_<macro name you've provided>` cmake option. **👉 [checkout example](/CMakeLists.txt#L24)**.
+    You can use `define_macro_option(<target name> <macro name in your code> <default value ON/OFF>)` after your executable or libraries. this will add `<target name>_ENABLE_<macro name you've provided>` cmake option.
+    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L24) and its corresponding effect in [the main source](/src/main.c#L10-L12).
 
 ## Resources for learning `CMake`
 
