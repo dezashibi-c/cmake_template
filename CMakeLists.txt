@@ -36,4 +36,4 @@ set(FILES_TO_COPY
     "${CMAKE_SOURCE_DIR}/LICENSE"
 )
 
-define_post_built_copy(main_exe_file ${FILES_TO_COPY})
+define_post_built_copy(main_exe_file "" ${FILES_TO_COPY})

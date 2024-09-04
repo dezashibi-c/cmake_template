@@ -57,8 +57,10 @@ But the main workflow of using this template is like this:
 
 - **Adding post build file copy**:
   
-    You can use `define_post_built_copy(<target name> <files...>)` to enable copying of any files relative to
+    You can use `define_post_built_copy(<target name> <relative destination> <files...>)` to enable copying of any files relative to
     executables or libraries.
+
+    **👉 NOTE:** no `./` is needed in destination, pass `""` if you want the files being copied to the root of the output directory.
 
     **👉 Example:** Checkout [usage example](/CMakeLists.txt#L35-L39).
 
