@@ -60,7 +60,7 @@ But the main workflow of using this template is like this:
     You can use `define_post_built_copy(<target name> <files...>)` to enable copying of any files relative to
     executables or libraries.
 
-    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L59-L63).
+    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L35-L39).
 
 ## Resources for learning `CMake`
 
