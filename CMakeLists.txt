@@ -28,3 +28,12 @@ define_macro_option(main_exe_file PRINT_GREETINGS ON)
 ###############################################################################
 
 enable_pre_build_testing(main_exe_file all_tests)
+
+###############################################################################
+# POST BUILD FILE COPIES
+###############################################################################
+set(FILES_TO_COPY
+    "${CMAKE_SOURCE_DIR}/LICENSE"
+)
+
+define_post_built_copy(main_exe_file ${FILES_TO_COPY})
