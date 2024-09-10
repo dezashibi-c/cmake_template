@@ -18,7 +18,7 @@ add_custom_target(all_tests)
 # first `add_custom_target(my_test_group)`
 # then you can pass it as the second argument to the `add_clove_test`
 # otherwise don't forget to pass "" for Group and for dependencies if there
-# are not any like `add_clove_test(test_something "" "")`
+# are not any like `add_clove_test(test_something "" path-to-file1 ...)`
 ###############################################################################
 
-add_clove_test(test_math_utils "" "../src/math_utils.c")
+add_clove_test(test_math_utils "" ../src/math_utils.c)
