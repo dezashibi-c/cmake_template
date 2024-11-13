@@ -23,11 +23,11 @@ By reading their source codes as they are fully commented you can understand pre
 But the main workflow of using this template is like this:
 
 - in main `CMakeLists.txt`:
-  1. Rename project name  in [line 11](/CMakeLists.txt#L11).
-  2. Rename your desired executable file `main_exe_file` on lines [19](/CMakeLists.txt#L19), [24](/CMakeLists.txt#L24), [30](/CMakeLists.txt#L30) and [39](/CMakeLists.txt#L39).
+  1. Rename project name  in [line 12](/CMakeLists.txt#L12).
+  2. Rename your desired executable file `main_exe_file` on lines [20](/CMakeLists.txt#L20), [25](/CMakeLists.txt#L25), [37](/CMakeLists.txt#L37) and [46](/CMakeLists.txt#L46).
   3. Every time you add a new `.c` file you add it in `EXECUTABLE TARGETS` section to one or more of your executable files.
-  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [19 to 22](/CMakeLists.txt#L19-L22) also make sure to rename the variables to meet your needs.
-  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 30](/CMakeLists.txt#L30).
+  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [20 to 23](/CMakeLists.txt#L20-23) also make sure to rename the variables to meet your needs.
+  5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 37](/CMakeLists.txt#L37).
 
 - Testing (`tests/CMakeLists.txt`):
   1. You create a new `.c` file in `tests` folder, name it like `test_<whatever>.c`, it's for readability but you don't have to.
@@ -63,6 +63,16 @@ But the main workflow of using this template is like this:
     **👉 NOTE:** no `./` is needed in destination, pass `""` if you want the files being copied to the root of the output directory.
 
     **👉 Example:** Checkout [usage example](/CMakeLists.txt#L35-L39).
+
+## `Raylib` Helper
+
+Looking at the official cmake template of the `raylib` I thought it might be good to add it to my template as well.
+
+As it is mentioned in the [line 7](/CMakeLists.txt#L7) you can remove that line when your project don't need raylib.
+
+Enabling `raylib` is as simple as just using `enable_raylib_for` command like `enable_raylib_for(game_example)` at [line 31](/CMakeLists.txt#L31).
+
+**👉 NOTE:** To include and manage your resources, use resources folder with a subfolder per game project.
 
 ## Resources for learning `CMake`
 

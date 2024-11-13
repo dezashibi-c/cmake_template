@@ -6,7 +6,8 @@
                 "${default}",
                 "${workspaceFolder}/src",
                 "${workspaceFolder}/include",
-                "${workspaceFolder}/extern"
+                "${workspaceFolder}/extern",
+                "${workspaceFolder}/build/_deps/raylib-src/src"
             ],
             "defines": [
                 "_DEBUG",
