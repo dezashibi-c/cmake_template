@@ -53,7 +53,7 @@ But the main workflow of using this template is like this:
 
     You can use `define_macro_option(<target name> <macro name in your code> <default value ON/OFF>)` after your executables or libraries. this will add `<target name>_ENABLE_<macro name you've provided>` cmake option.
 
-    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L24) and its corresponding effect in [the main source](/src/main.c#L10-L12).
+    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L25) and its corresponding effect in [the main source](/src/main.c#L10-L12).
 
 - **Adding post build file copy**:
   
@@ -62,7 +62,7 @@ But the main workflow of using this template is like this:
 
     **👉 NOTE:** no `./` is needed in destination, pass `""` if you want the files being copied to the root of the output directory.
 
-    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L35-L39).
+    **👉 Example:** Checkout [usage example](/CMakeLists.txt#L42-L44).
 
 ## `Raylib` Helper
 
