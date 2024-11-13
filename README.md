@@ -26,7 +26,7 @@ But the main workflow of using this template is like this:
   1. Rename project name  in [line 12](/CMakeLists.txt#L12).
   2. Rename your desired executable file `main_exe_file` on lines [20](/CMakeLists.txt#L20), [25](/CMakeLists.txt#L25), [37](/CMakeLists.txt#L37) and [46](/CMakeLists.txt#L46).
   3. Every time you add a new `.c` file you add it in `EXECUTABLE TARGETS` section to one or more of your executable files.
-  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [20 to 23](/CMakeLists.txt#L20-23) also make sure to rename the variables to meet your needs.
+  4. If you want to add another Target aka. executable or library feel free to repeat what's on lines [20 to 23](/CMakeLists.txt#L20-L23) also make sure to rename the variables to meet your needs.
   5. In case you want also to enable pre build testing meaning re-building and running tests every time you build certain target look at [line 37](/CMakeLists.txt#L37).
 
 - Testing (`tests/CMakeLists.txt`):
